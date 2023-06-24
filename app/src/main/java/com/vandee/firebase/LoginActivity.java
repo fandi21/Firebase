@@ -50,9 +50,10 @@ public class LoginActivity extends AppCompatActivity {
                 if(!validateUsername() || !validatePassword()){
 
                 }else {
+
                     checkUser();
                     Toast.makeText(LoginActivity.this, "Masuk", Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
+
                 }
             }
         });
@@ -102,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
                     etUsername.setError(null);
                     String passwordFromDB = snapshot.child(username).child("password")
                             .getValue(String.class);
-                    if(!Objects.equals(passwordFromDB, etPassword)){
+                    if(!Objects.equals(passwordFromDB, password)){
                         etUsername.setError(null);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);

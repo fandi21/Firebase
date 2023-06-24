@@ -15,6 +15,7 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp">
         <LinearLayout
+            android:id="@+id/ll_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -83,6 +84,38 @@
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 app:cornerRadius="20dp" />
+            <LinearLayout
+                android:layout_width="340dp"
+                android:layout_height="21dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/lavender" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:textColor="@color/lavender" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/lavender"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/google"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"/>
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/googleSignin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
             <TextView
                 android:id="@+id/loginR"
                 android:layout_width="match_parent"
@@ -90,7 +123,7 @@
                 android:text="Already user? Login"
                 android:gravity="center"
                 android:padding="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:textSize="15sp"
                 android:textColor="@color/lavender"/>
         </LinearLayout>
